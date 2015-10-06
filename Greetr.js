@@ -47,7 +47,7 @@
 			return greetings[this.language] + " " + this.firstName + "!";
 		},
 		formalGreeting: function() {
-			return formalGreetings[this.language] + "," + this.fullName();
+			return formalGreetings[this.language] + ", " + this.fullName();
 		},
 		
 		// chainable methods return their own containing object
@@ -69,7 +69,7 @@
 		
 		log: function() {
 			if(console) {
-					console.log(logMessages[this.language] + ":" + this.fullName());
+					console.log(logMessages[this.language] + ": " + this.fullName());
 			}
 			// make chainable
 			return this;
@@ -82,7 +82,8 @@
 			 // make chainable
 			return this;
 	
-		}
+		},
+		
 		HTMLGreeting: function(selector, formal) {
 			if (!$) {
 				throw "jQuery Not Loaded";
